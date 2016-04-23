@@ -1,0 +1,63 @@
+= minitest-speed
+
+home :: https://github.com/seattlerb/minitest-speed
+rdoc :: http://docs.seattlerb.org/minitest-speed
+
+== DESCRIPTION:
+
+minitest-speed adds test hooks to verify the time it takes to run the
+setup, body, and teardown phases of each test. If the time of any
+phase goes over the maximum time, it fails the test. Use class
+variables to set the maximum thresholds and crank it down over time.
+
+== FEATURES/PROBLEMS:
+
+* Simple module inclusion to activate
+* Tweakable thresholds for each phase.
+
+== SYNOPSIS:
+
+    class SpeedTest < Minitest::Test
+      include Minitest::Speed
+
+      @@max_setup_time    = 0.01
+      @@max_test_time     = 0.01
+      @@max_teardown_time = 0.01
+    end
+
+    class MyTest << SpeedTest
+      # ...
+    end
+
+== REQUIREMENTS:
+
+* minitest 5+
+
+== INSTALL:
+
+* sudo gem install minitest-speed
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) Ryan Davis, seattle.rb
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
