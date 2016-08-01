@@ -25,7 +25,7 @@ variables to set the maximum thresholds and crank it down over time.
       @@max_teardown_time = 0.01
     end
 
-    class MyTest << SpeedTest
+    class MyTest < SpeedTest
       # ...
     end
 
