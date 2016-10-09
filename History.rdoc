@@ -1,3 +1,9 @@
+=== 1.0.1 / 2016-10-09
+
+* 1 bug fix:
+
+  * Fixed dependency on minitest.
+
 === 1.0.0 / 2016-04-23
 
 * 1 major enhancement
